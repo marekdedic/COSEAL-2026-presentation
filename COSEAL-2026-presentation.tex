@@ -48,17 +48,18 @@
 \newcommand{\vdeg}{\mathrm{d}} % degree of node or edge
 \newcommand{\edeg}{\delta} % degree of node or edge
 
-\title[RL for structured data]
+\title[HPO for GNNs]
 {%
-	Representation learning for structured data
+	Benchmarking and Transfer Learning for Hyperparameter Optimization of Graph Neural Networks
 }
 
-\newdate{presentation}{25}{10}{2025}
-\date[October 2025]{ECAI 2025 DC, \displaydate{presentation}}
+\newdate{presentation}{19}{05}{2026}
+\date[May 2026]{COSEAL 2026, \displaydate{presentation}}
 
-\author[Marek Dědič]
+\author[Dědič \& Bělohlávek]
 {%
-	Marek~Dědič\inst{1, 2}
+	\underline{Marek~Dědič}\inst{1, 2}
+	Michal~Bělohlávek\inst{1, 2}
 }
 
 \institute[CTU in Prague, Cisco]
@@ -71,24 +72,6 @@
 
 \begin{frame}
 	\titlepage
-\end{frame}
-
-\begin{frame}{Performance-complexity trade-off in graph representation learning}
-	Replace graph \( G \) with a sequence of coarsened graphs \( G_0, G_1, \dots, G_L \). Train model \( M \) on each graph and measure performance and complexity. Stop when the desired trade-off is achieved. \\
-	{%
-		\raggedleft
-		\includegraphics[width=0.5\linewidth]{images/harp-overview/harp-overview.pdf} \\
-	}
-	\vspace{-140pt}
-	{%
-		\raggedright
-		\vspace{100pt}
-		\includegraphics[width=0.5\linewidth]{images/adaptive-coarsening/adaptive-coarsening.pdf}
-	}
-	\hspace{40pt}
-	\raisebox{-20pt}{%
-		\includegraphics[width=0.25\linewidth]{images/deep-harp/deep-harp.pdf}
-	}
 \end{frame}
 
 \begin{frame}{Hyperparameter optimization for GNNs}
