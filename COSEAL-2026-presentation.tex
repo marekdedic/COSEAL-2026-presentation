@@ -149,23 +149,28 @@
 \end{frame}
 
 \begin{frame}{Cross-RF: The results}
-	\textbf{Average rank} (lower is better):
+	\textbf{Average rank across all datasets (lower is better):}
 
 	\bigskip
-	\begin{center}
-		\begin{tabular}{lc}
-			\hline
-			Method   & Avg.\ rank \\
-			\hline
-			\textbf{Cross-RF} & \textbf{1.78} \\
-			BO       & 2.00 \\
-			TPE      & 2.22 \\
-			\hline
-		\end{tabular}
-	\end{center}
+	\begin{tikzpicture}
+		\def\barh{0.45}
+		\def\scale{4.4}
+		% bars
+		\fill[yellow!80!orange] (0, 2*\barh + 1*0.15) rectangle (1.78*\scale, 2*\barh + 1*0.15 + \barh);
+		\fill[gray!40]          (0, 1*\barh + 0*0.15) rectangle (2.00*\scale, 1*\barh + 0*0.15 + \barh);
+		\fill[gray!40]          (0, 0*\barh - 1*0.15) rectangle (2.22*\scale, 0*\barh - 1*0.15 + \barh);
+		% labels left
+		\node[anchor=east, font=\small] at (-0.1, 2*\barh + 1*0.15 + \barh/2) {Cross-RF};
+		\node[anchor=east, font=\small] at (-0.1, 1*\barh + 0*0.15 + \barh/2) {BO};
+		\node[anchor=east, font=\small] at (-0.1, 0*\barh - 1*0.15 + \barh/2) {TPE};
+		% value labels right
+		\node[anchor=west, font=\small] at (1.78*\scale + 0.1, 2*\barh + 1*0.15 + \barh/2) {1.78};
+		\node[anchor=west, font=\small] at (2.00*\scale + 0.1, 1*\barh + 0*0.15 + \barh/2) {2.00};
+		\node[anchor=west, font=\small] at (2.22*\scale + 0.1, 0*\barh - 1*0.15 + \barh/2) {2.22};
+	\end{tikzpicture}
 
 	\bigskip
-	Best on 4/9 datasets, second-best on 3/9.
+	Cross-RF is best on 4/9 datasets, second-best on 3/9.
 \end{frame}
 
 
